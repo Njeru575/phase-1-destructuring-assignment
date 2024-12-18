@@ -1,6 +1,68 @@
 const farmAnimals = 'cow horse sheep pig chicken';
 
+// Destructuring the farmAnimals string into individual variables
+
+const [cow, horse, sheep, pig, chicken] = farmAnimals.split(' ');
+
+console.log(cow);      // "cow"
+console.log(horse);    // "horse"
+console.log(sheep);    // "sheep"
+console.log(pig);      // "pig"
+console.log(chicken);  // "chicken"
+
+// Assume animal sounds are given in an array or string
+const animalSounds = ['moo', 'neigh', 'baa', 'oink', 'cluck'];
+
+// Destructure to assign variables
+const [moo, neigh, baa, oink, cluck] = animalSounds;
+
+console.log(moo);    // "moo"
+console.log(neigh);  // "neigh"
+console.log(baa);    // "baa"
+console.log(oink);   // "oink"
+console.log(cluck);  // "cluck"
+
+
+const [bessie, dolly, babe, little] = farmAnimals.split(' ');
+
+console.log(bessie);  // "cow"
+console.log(dolly);   // "sheep"
+console.log(babe);    // "pig"
+console.log(little);  // "chicken"
+
+const [blackAndWhite, black, pink] = farmAnimals.split(' ').slice(0, 3);
+
+console.log(blackAndWhite);  // "cow"
+console.log(black);          // "horse"
+console.log(pink);           // "sheep"
+
+
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+// Destructuring colors into variables
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+console.log(red);     // "red"
+console.log(orange);  // "orange"
+console.log(yellow);  // "yellow"
+console.log(green);   // "green"
+console.log(blue);    // "blue"
+console.log(indigo);  // "indigo"
+console.log(violet);  // "violet"
+
+const [r, o, y, g, b, , v] = colors;
+
+console.log(r);  // "red"
+console.log(o);  // "orange"
+console.log(y);  // "yellow"
+console.log(g);  // "green"
+console.log(b);  // "blue"
+console.log(v);  // "violet"
+
+const [, , , , , indg] = colors;
+
+console.log(indg);  // "indigo"
+
 
 const muppet = {
   muppetName: 'Miss Piggy',
@@ -9,6 +71,15 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+
+// Destructuring the muppet object into variables
+const { muppetName, color, song, job, partner } = muppet;
+
+console.log(muppetName);  // "Miss Piggy"
+console.log(color);       // "pink"
+console.log(song);        // "Never Before, Never Again"
+console.log(job);         // "Cast member of The Muppet Show"
+console.log(partner);     // "Kermit"
 
 const nestedMuppet = {
   nestedName: 'Kermit',
